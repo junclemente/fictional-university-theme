@@ -1,3 +1,7 @@
+<!--
+This is the template page for blog post listings.
+When a list of blog posts is displayed, this is the template used.
+-->
 <?php get_header(); ?>
 
 

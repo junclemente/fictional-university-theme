@@ -1,3 +1,7 @@
+<!--
+This is the template for pages.
+-->
+
 <?php get_header();
 
   while(have_posts()) {

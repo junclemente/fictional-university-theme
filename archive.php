@@ -1,3 +1,9 @@
+<!--
+This is the template page for archive display pages such as when you selecte
+all blog posts by date, author, or category.
+-->
+
+
 <?php get_header(); ?>
 
 

@@ -1,3 +1,9 @@
+<!--
+This page is the custom home page for the site.
+This can be selected in Settings > Reading > "Your homepage displays" A static
+page (select below).
+-->
+
 <?php get_header(); ?>
 
 <div class="page-banner">
