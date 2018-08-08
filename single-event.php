@@ -26,16 +26,29 @@ This is the template page for individual event posts.
     </div>
 
     <div class="generic-content"><?php the_content(); ?></div>
-
     <?php
 
       $relatedPrograms = get_field('related_programs');
-      foreach($relatedPrograms as $program) { ?>
 
-        <li><a href="<?php echo get_the_permalink($program) ?>"><?php echo get_the_title($program)?></a></li>
+      if ($relatedPrograms) {
 
-      <?php }
+        echo '<hr class="section-break">';
 
+        if (sizeof($relatedPrograms > 1)) {
+          echo '<h2 class="headline headline--medium">Related Programs</h2>';
+        } else {
+          echo '<h2 class="headline headline--medium">Related Program</h2>';
+        }
+        echo '<ul class="link-list min-list">';
+
+
+        foreach($relatedPrograms as $program) { ?>
+
+          <li><a href="<?php echo get_the_permalink($program) ?>"><?php echo get_the_title($program) ?></a></li>
+
+        <?php }
+        echo '</ul';
+      }
     ?>
   </div>
 
