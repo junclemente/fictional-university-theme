@@ -36,12 +36,14 @@ This is the template page for individual Program posts.
             'orderby' => 'meta_value_num',
             'order' => 'ASC',
             'meta_query' => array(
+              // Finds all future events starting with today
               array(
                 'key' => 'event_date',
                 'compare' => '>=',
                 'value' => $today,
                 'type' => 'numeric'
               ),
+              // Finds all events that are related to post=>Program
               array(
                 'key' => 'related_programs',
                 'compare' => 'LIKE',
