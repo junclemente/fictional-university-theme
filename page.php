@@ -6,11 +6,7 @@ This is the template for pages.
 
   while(have_posts()) {
     the_post();
-    pageBanner(array(
-      'title' => 'Hello there this is the title',
-      'subtitle' => 'Hi, this is the subtitle',
-      'photo' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLHd_cVLfbFqYUEk2KmXHs4FzcOpxmChfMu_-lj_bqcrk8heXT'
-    ));
+    pageBanner();
     ?>
 
 
