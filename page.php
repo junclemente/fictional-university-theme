@@ -5,17 +5,15 @@ This is the template for pages.
 <?php get_header();
 
   while(have_posts()) {
-    the_post(); ?>
+    the_post();
+    pageBanner(array(
+      'title' => 'Hello there this is the title',
+      'subtitle' => 'Hi, this is the subtitle',
+      'photo' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLHd_cVLfbFqYUEk2KmXHs4FzcOpxmChfMu_-lj_bqcrk8heXT'
+    ));
+    ?>
 
-<div class="page-banner">
-    <div class="page-banner__bg-image" style="background-image: url(<?php echo get_theme_file_uri('/images/ocean.jpg'); ?>"></div>
-    <div class="page-banner__content container container--narrow">
-      <h1 class="page-banner__title"><?php the_title(); ?></h1>
-      <div class="page-banner__intro">
-        <p>Dont forget to replace me later.</p>
-      </div>
-    </div>
-  </div>
+
 
   <div class="container container--narrow page-section">
 
@@ -45,6 +43,8 @@ This is the template for pages.
           } else {
             $findChildrenOf = get_the_ID();
           }
+
+
           wp_list_pages(array(
             'title_li' => NULL,
             'child_of' => $findChildrenOf,
